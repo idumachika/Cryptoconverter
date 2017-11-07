@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.chikaiduma.user.cryptoconverter.MainActivity">
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorPrimary"
+        android:layout_marginTop="-7dp"
+        android:layout_marginLeft="-12dp"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/speaker_relative_layout"
+        android:layout_width="339dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/spinnerborder"
+        >
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/usd"
+        android:backgroundTint="@color/colorPrimary"
+        android:spinnerMode="dialog"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"/>
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="110dp"
+        android:id="@+id/relative"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linear1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:id="@+id/spinnerImage"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerText"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="19sp"
+                android:fontFamily="monospace"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark"
+            android:id="@+id/view"
+            android:layout_below="@id/linear1"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linear2"
+            android:layout_below="@id/view"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Rate: "
+                android:layout_below="@id/view"
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:fontFamily="cursive"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rate"
+                android:fontFamily="monospace"
+                android:layout_marginLeft="3dp"
+                android:textColor="#fb8d03"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="0dp"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/speaker_relative"
+        android:layout_width="339dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/spinnerborder"
+        >
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/btc"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_marginTop="10dp"
+        android:spinnerMode="dialog"
+        android:layout_marginLeft="16dp"/>
+
+        </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="160dp"
+        android:layout_height="53dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="200dp"
+        android:id="@+id/relative1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linear3"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/spinnerImageCrypto"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerTextCrypto"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="19sp"
+                android:fontFamily="monospace"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"
+            android:id="@+id/view1"
+            android:layout_below="@id/linear3"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linear4"
+            android:layout_below="@id/view1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rateCrypto"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:textColor="#fb8d03"
+                android:textSize="14sp"
+                android:layout_marginTop="0dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="BTC:"
+                android:id="@+id/cryptoName"
+                android:layout_below="@id/view"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="cursive"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="110dp"
+        android:shadowColor="@color/colorPrimary"
+        android:textColorLink="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:id="@+id/editAmount"
+        android:hint="Enter Value(Crypto)"
+        android:fontFamily="monospace"
+        android:inputType="numberDecimal"
+        android:textSize="14sp"
+        android:layout_below="@id/relative1"
+        android:imeOptions="actionGo" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textResult"
+        android:textSize="18sp"
+        android:fontFamily="monospace"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@id/editAmount"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/execute"
+        android:text="Convert"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="monospace"
+        android:background="@drawable/button"
+        android:layout_below="@id/textResult"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+
+
+
+
+</RelativeLayout>
